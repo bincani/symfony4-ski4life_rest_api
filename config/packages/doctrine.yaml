@@ -29,6 +29,5 @@ doctrine:
             custom_mapping:
                 is_bundle: false                
                 type: annotation
-                # dir: "%kernel.root_dir%/../src/OAuthBundle/Entity"
                 dir: "%kernel.project_dir%/src/OAuthBundle/Entity"
                 prefix: App\OAuthBundle\Entity
