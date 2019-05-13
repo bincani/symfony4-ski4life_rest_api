@@ -14,7 +14,6 @@ doctrine:
         default_table_options:
             charset: utf8mb4
             collate: utf8mb4_unicode_ci
-
         url: '%env(resolve:DATABASE_URL)%'
     orm:
         auto_generate_proxy_classes: true
@@ -27,9 +26,9 @@ doctrine:
                 dir: '%kernel.project_dir%/src/Entity'
                 prefix: 'App\Entity'
                 alias: App
-
             custom_mapping:
+                is_bundle: false                
                 type: annotation
+                # dir: "%kernel.root_dir%/../src/OAuthBundle/Entity"
+                dir: "%kernel.project_dir%/src/OAuthBundle/Entity"
                 prefix: App\OAuthBundle\Entity
-                dir: "%kernel.root_dir%/../src/OAuthBundle/Entity"
-                is_bundle: false
